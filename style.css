@@ -54,7 +54,7 @@ nav {
 .nav-links {
   gap: 2rem;
   list-style: none;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 a {
@@ -71,7 +71,7 @@ a:hover {
 }
 
 #logo {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 #logo:hover {
@@ -212,8 +212,8 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 600px;
-  width: 600px;
+  height: 400px;
+  width: 400px;
   margin: auto 0;
 }
 
@@ -261,7 +261,7 @@ section {
 button {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .btn {
@@ -270,6 +270,9 @@ button {
   padding: 1rem ;
   width: 8rem;
   border-radius: 2rem;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-color-1 , .btn-color-2 {
@@ -304,4 +307,109 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ABOUT */
+
+#About {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.about-containers ,
+.about-details-container {
+    display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem; 
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53,53,53) 0.1rem solid;
+  border-color: rgb(163,163,163);  
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%; 
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+}
+
+.edu {
+  display: flex;
+  font-size: 3rem;
+  margin-top: -5.6rem;
+  margin-left: 18.5rem;
+  text-decoration: solid 3px black underline; 
+}
+
+/* EXPERIENCE SECTION */
+
+#Skills {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85,85,85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom:2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row ;
+  gap: 2.5rem;
+  justify-content: space-evenly;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-evenly;
+  gap:0.5rem;
+}
+
+article .icon {
+    cursor: default;
+}
+
+.edu1 {
+  display: flex;
+  margin-left: 26rem;
 }
