@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: color 0.5s;
+  background: linear-gradient(270deg, #f0f8ff, #ffe4e1, #e6ffe6, #fff0f5);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* Light mode */
+.light-mode {
+  color: #000;
+}
+
+/* Dark mode */
+.dark-mode {
+  background: linear-gradient(270deg, #1e1e1e, #2c2c2c, #121212, #1f1f1f);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+a, 
+.btn {
+    transition: all 300ms ease;
+}
+
+/* Desktop navigation  */
+
+nav, 
+.nav-links {
+    display: flex;
+}
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;   
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color:rgb(181, 181, 181);
+}
+
+#logo {
+    font-size: 2rem;
+}
+
+#logo:hover {
+    cursor: default;
+}
+
+/* Hamburger Menu */
+ 
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
