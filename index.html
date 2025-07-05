@@ -5,14 +5,16 @@
   <title>Manav Rai Dewan Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="mediaquerry.css">
 </head>
 <body class="light-mode">
     
     <nav class="desktop-nav">
-        <div id="logo">Manav Rai Dewan</div>
-        <button id="theme-toggle" class="btn btn-color-2">🌙 Dark Mode</button>
+        <div id="logo" class="dark">Manav Rai Dewan</div>
+        <button id="theme-toggle" class="btn btn-color-2 dark">🌙 Dark Mode</button>
         <div>
-            <ul class="nav-links">
+            <ul class="nav-links dark">
                 <li><a href="#">Home</a></li>
                 <li><a href="#Educuation">Educuation</a></li>
                 <li><a href="#Skills">Skills</a></li>
@@ -49,14 +51,14 @@
         <img src="pics/1A0782FE-012A-4DFC-B8BE-C33F63B0894A-modified.png" alt="Manav dewan Profie Picture">
     </div>
     <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Manav Rai Dewan</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <p class="section__text__p1 dark">Hello, I'm</p>
+        <h1 class="title dark">Manav Rai Dewan</h1>
+        <p class="section__text__p2 dark">Frontend Developer</p>
         <div class="btn-container">
             <button class="btn btn-color-2" onclick="window.open('pics/resume-example.pdf')">Download CV</button>
             <button class="btn btn-color-1" onclick="location.href='./#Contact'">Contact Info</button>
         </div>
-        <div class="socials-container">
+        <div class="socials-container dark">
             <img src="pics/linkedin.png" alt="Linkedin" class="icon" onclick="location.href='https://www.linkedin.com/in/manav-rai-dewan-512784370/'">
             <img src="pics/github.png" alt="Linkedin" class="icon" onclick="location.href='https://github.com/ManavRai2104'">
         </div>
@@ -65,16 +67,16 @@
 
     <!-- ABOUT SECTION -->
      <section id="Educuation">
-         <p class="section__text__p1">Get To Know More</p> 
-        <h1 class="title">About Me</h1>
+         <p class="section__text__p1 dark">Get To Know More</p> 
+        <h1 class="title dark">About Me</h1>
        
-        <div class="section-container" id="Educuation">
+        <div class="section-container " id="Educuation" >
             <div class="section__pic-container">
                 <img src="pics/IMG_2931-modified.png" alt="Profile pic" class="about-pic">
             </div>
             
             <div class="about-details-container">
-                 <h2 class="experience-sub-title">Educuation</h2>
+                 <h2 class="experience-sub-title dark">Educuation</h2>
                 <div class="about-containers">
                     <div class="details-container">
                         <img src="pics/education.png" alt="" class="icon">
@@ -100,70 +102,85 @@
 
         <div id="Skills">
       
-                <p class="section__text__p1">Explore My</p>
-                <h1 class="title">Experience</h1>
+                <p class="section__text__p1 dark">Explore My</p>
+                <h1 class="title dark">Experience</h1>
       
                 <div class="experience-details-container">
                     <div class="about-containers">
                         <div class="details-container">
-                            <h2 class="experience-sub-title">Frontend Development</h2>
+                            <h2 class="experience-sub-title rr">Frontend Development</h2>
                             <div class="article-container">
                                 <article>
-                                    <img src="pics/checkmark (1).png" alt="checkmark" class="icon">
+                                   <i class="fa-brands fa-html5"></i>
                                     <div>
                                         <h3>HTML</h3>
+                                        <p>Experienced</p>
+                                    </div>
+                                </article>
+                                 <article>
+                                    <i class="fa-brands fa-css3"></i>
+                                    <div>
+                                        <h3>CSS</h3>
+                                        <p>Experienced</p>
+                                    </div>
+                                </article>
+                                 <article>
+                                    <i class="fa-brands fa-js"></i>
+                                    <div>
+                                        <h3>JavaScript</h3>
+                                        <p>Intermediate</p>
+                                    </div>
+                                </article>
+                                 <article>
+                                    <i class="fa-brands fa-react"></i>
+                                    <div>
+                                        <h3>React</h3>
+                                        <p>Intermediate</p>
+                                    </div>
+                                </article>
+                                 <article>
+                                    <i class="fa-solid fa-database"></i>
+                                    <div>
+                                        <h3>SQL</h3>
+                                        <p>Basic</p>
+                                    </div>
+                                </article>
+                                 <article>
+                                  <i class="fa-brands fa-bootstrap"></i>
+                                    <div>
+                                        <h3>BootStrap</h3>
+                                        <p>Experienced</p>
+                                    </div>
+                                </article>
+                                 <article>
+                                    <i class='bx bxl-tailwind-css'></i>
+                                    <div>
+                                        <h3>Tailwind</h3>
                                         <p>Experience</p>
                                     </div>
                                 </article>
                                  <article>
-                                    <img src="pics/checkmark (1).png" alt="checkmark" class="icon">
+                                    <i class="fa-brands fa-git-alt"></i>
                                     <div>
-                                        <h3>HTML</h3>
-                                        <p>Experience</p>
+                                        <h3>Git</h3>
+                                        <p>Experienced</p>
                                     </div>
                                 </article>
                                  <article>
-                                    <img src="pics/checkmark (1).png" alt="checkmark" class="icon">
+                                    <i class="fa-brands fa-github"></i>
                                     <div>
-                                        <h3>HTML</h3>
-                                        <p>Experience</p>
+                                        <h3>Github</h3>
+                                        <p>Experienced</p>
                                     </div>
                                 </article>
                                  <article>
-                                    <img src="pics/checkmark (1).png" alt="checkmark" class="icon">
+                                    <i class="fa-brands fa-node-js"></i>
                                     <div>
-                                        <h3>HTML</h3>
-                                        <p>Experience</p>
+                                        <h3>NodeJs</h3>
+                                        <p>Basic</p>
                                     </div>
                                 </article>
-                                 <article>
-                                    <img src="pics/checkmark (1).png" alt="checkmark" class="icon">
-                                    <div>
-                                        <h3>HTML</h3>
-                                        <p>Experience</p>
-                                    </div>
-                                </article>
-                                 <article>
-                                    <img src="pics/checkmark (1).png" alt="checkmark" class="icon">
-                                    <div>
-                                        <h3>HTML</h3>
-                                        <p>Experience</p>
-                                    </div>
-                                </article>
-                                 <article>
-                                    <img src="pics/checkmark (1).png" alt="checkmark" class="icon">
-                                    <div>
-                                        <h3>HTML</h3>
-                                        <p>Experience</p>
-                                    </div>
-                                </article>
-                                 <article>
-                                    <img src="pics/checkmark (1).png" alt="checkmark" class="icon">
-                                    <div>
-                                        <h3>HTML</h3>
-                                        <p>Experience</p>
-                                    </div>
-                                </article>
+                                
                             </div>
                         </div>
                     </div>                    
@@ -174,9 +191,87 @@
         </section>
 
         <section id="Projects">
-
+            <p class="section__text__p1 dark">Browse My Recent</p>
+            <h1 class="title dark">Projects</h1>
+            <div class="experience-details-container ">
+                <div class="about-containers  prog">
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="pics/Screenshot 2025-07-04 at 12.23.32 am.png" alt="project" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title " style="text-decoration: solid underline;">
+                        Project One - For Desktop Version
+                    </h2>
+                    <p class="text-container">Spotify UI Clone project, crafted purely with HTML & CSS! 
+<br>
+<br>
+In this endeavor, I delved deep into responsive design, structuring layouts, and emulating real-world app interfaces. <br>My focus? Achieving pixel-perfect precision and meticulous attention to detail to mirror the Spotify web player's aesthetics.</p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ManavRai2104/Spotify-UI-Clone'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://manavrai2104.github.io/Spotify-UI-Clone/'">
+                            Go Live
+                        </button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="pics/Wea.jpg" alt="project" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title" style="text-decoration: solid underline;">
+                        Project Two
+                    </h2>
+                    <p class="text-container">Responsive Weather App created with HTML, CSS, and JavaScript! The app fetches live weather data and showcases it in a sleek, contemporary UI that adapts seamlessly to all devices 📱💻
+<br>
+<br>
+<br>
+This project was a great opportunity to enhance my skills in: <br>
+- API integration <br>
+- DOM manipulation <br>
+- Implementing responsive design techniques <br>
+- Crafting a polished UI using Flexbox & gradients</p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ManavRai2104/weather-app'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://manavrai2104.github.io/weather-app/'">
+                            Go Live
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
         </section>
+
+<section id="Contact">
+  <p class="section__text__p1 dark">Get In Touch</p>
+  <h1 class="title dark">Contact Me</h1>
+  <div class="contact-container">
+    <form class="contact-form" action="https://formspree.io/f/xwkgnopq" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="subject" placeholder="Subject" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
     
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links dark">
+                <li><a href="#">Home</a></li>
+                <li><a href="#Educuation">Educuation</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2025 Manav Rai Dewan.  All Rights Reserved.</p>
+    </footer>
   <script src="main.js"></script>
 </body>
 </html>
