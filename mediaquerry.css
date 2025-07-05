@@ -1,0 +1,1002 @@
+/* Global Styles - No changes needed here, as these are base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: color 0.5s, background 0.5s;
+  background: linear-gradient(270deg, #f0f8ff, #ffe4e1, #e6ffe6, #fff0f5);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* Navigation */
+nav,
+.nav-links {
+  display: flex;
+}
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+#logo {
+  font-size: 1.5rem;
+}
+
+#logo:hover {
+  cursor: default;
+}
+
+/* Hamburger Menu - Hidden by default on larger screens */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 100; /* Ensure menu is above other content */
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.7rem;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px,-5px);
+}
+
+/* Reset hamburger span when closed */
+.hamburger-icon span:first-child {
+  transform: none;
+}
+.hamburger-icon span:nth-child(2) {
+  opacity: 1;
+}
+.hamburger-icon span:last-child {
+  transform: none;
+}
+
+/* Dark mode overrides */
+.dark-mode a {
+  color: #fff;
+}
+
+.dark-mode a:hover {
+  color: lightgrey;
+  text-decoration-color: #aaa;
+}
+
+.dark-mode .menu-links {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .menu-links a {
+  color: #fff;
+}
+
+.dark-mode .hamburger-icon span {
+  background-color: #fff;
+}
+
+/* SECTIONS */
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content; /* Ensures section doesn't cut off content */
+}
+
+.section-container {
+  display: flex;
+}
+
+/* Profile Section  */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text_p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.section__text__p2 {
+  font-size: 2.45rem;
+  margin-bottom: 2.7rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+  margin-top: 2rem;
+  gap: 2rem; /* This 'gap' here is likely a mistake, gap is for flex/grid containers */
+}
+
+/* BUTTONS */
+button {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* This 'gap' is on button itself, maybe for inner content if any */
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem ;
+  width: 8rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-color-1 , .btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover ,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover { /* This rule is a bit unusual: it applies btn-color-1 style AND btn-color-2:hover style */
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ABOUT SECTION */
+#About {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers ,
+.about-details-container {
+    display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53,53,53) 0.1rem solid;
+  border-color: rgb(163,163,163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+/* This is a duplicate of .section__pic-container above, consider consolidating */
+/* .section__pic-container {
+  height: 400px;
+  width: 400px;
+} */
+
+.edu {
+  display: flex;
+  font-size: 3rem;
+  margin-top: -5.6rem; /* This negative margin is very specific and might break on mobile */
+  margin-left: 18.5rem; /* This fixed margin is problematic for responsiveness */
+  text-decoration: solid 3px black underline;
+}
+
+/* EXPERIENCE SECTION */
+#Skills {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85,85,85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom:2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row ;
+  gap: 2.5rem;
+  justify-content: space-evenly;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-evenly;
+  gap:0.5rem;
+  flex-direction: column; /* Often better for icon + text */
+  align-items: center; /* Center items if column */
+  text-align: center; /* Center text */
+}
+
+article i {
+    cursor: default;
+}
+
+.edu1 {
+  display: flex;
+  margin-left: 26rem; /* This fixed margin is problematic for responsiveness */
+}
+
+article i {
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+/* PROJECTS SECTION */
+#Projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163,163,163);
+  background-color: rgb(250, 250, 250);
+}
+
+.project-img{
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+  object-fit: cover; /* Ensures image covers area without distortion */
+}
+
+.project-title {
+  margin: 1rem;
+  color: #000;
+}
+
+.project-btn {
+  color: #000;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT SECTION */
+.contact-container {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 2rem); /* Account for padding */
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: #3a3a3a;
+  box-shadow: 0 0 0 2px #00ffff;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00ffff;
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #00dddd;
+}
+
+/* Light mode */
+.light-mode {
+  color: #000;
+  background: linear-gradient(270deg, #f0f8ff, #ffe4e1, #e6ffe6, #fff0f5);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* Dark mode */
+.dark-mode {
+  color: gray;
+  background: linear-gradient(270deg, #1e1e1e, #2c2c2c, #121212, #1f1f1f);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+}
+
+.dark-mode .dark {
+  color: aqua;
+}
+
+.dark-mode h3 {
+  color: #fff;
+}
+
+.dark-mode .rr {
+  color: #fff;
+}
+
+.dark-mode .details-container {
+  background: #2c2c2c;
+  border-color: #4a4a4a;
+}
+
+.dark-mode .color-container {
+  background-color: #2c2c2c;
+  border-color: #4a4a4a;
+}
+
+.dark-mode .project-title {
+  color: #fff;
+}
+
+.dark-mode .project-btn {
+  color: #fff;
+  border-color: #4a4a4a;
+}
+
+.dark-mode .btn-color-1,
+.dark-mode .btn-color-2 {
+  border-color: #ccc;
+}
+
+.dark-mode .btn-color-1:hover {
+  background: #333;
+  color: white;
+}
+
+.dark-mode .btn-color-2:hover {
+  background: #333;
+  color: white;
+  border-color: #fff;
+}
+
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+  justify-content: center;
+}
+
+/* ========================================================= */
+/* MEDIA QUERIES - Making them "nicer" and more organized   */
+/* ========================================================= */
+
+/* Tablet & Large Mobile Devices (991px down to 768px) */
+/* Adjustments for tablets and larger phones in portrait mode */
+@media screen and (max-width: 991px) {
+  /* General Layout */
+  section {
+    margin: 0 5rem; /* Reduced horizontal margin */
+    padding-top: 7vh; /* More top padding for sections */
+    height: auto; /* Allow sections to adjust height based on content */
+    min-height: unset; /* Remove min-height constraint */
+  }
+
+  /* Navigation */
+  nav {
+    height: 12vh;
+    justify-content: space-between; /* Push logo and hamburger to ends */
+    padding: 0 2rem;
+  }
+  .nav-links {
+    display: none; /* Hide main navigation links */
+  }
+  #hamburger-nav {
+    display: flex; /* Show hamburger menu */
+  }
+  #logo {
+    font-size: 1.3rem; /* Slightly smaller logo */
+  }
+
+  /* Profile Section */
+  #profile {
+    flex-direction: column; /* Stack elements vertically */
+    height: auto;
+    gap: 2rem; /* Reduced gap */
+    padding: 2rem 0; /* Add vertical padding */
+  }
+  .section__pic-container {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 1.5rem auto; /* Center image with bottom margin */
+  }
+  .section__text {
+    padding: 0 1rem; /* Add some horizontal padding to text */
+  }
+  .section__text__p1 {
+    font-size: 1.5rem;
+  }
+  .section__text__p2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .btn-container {
+    flex-direction: row; /* Keep buttons side by side if space allows */
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .btn {
+    width: 8rem; /* Maintain original button width */
+    padding: 0.8rem; /* Slightly less padding */
+  }
+  .socials-container {
+    margin-top: 1rem;
+    gap: 0.8rem; /* Reduce gap for icons */
+  }
+  .icon {
+    height: 1.8rem;
+    margin-top: 1.5rem;
+  }
+
+  /* About Section */
+  .about-containers,
+  .section-container { /* Apply flex-direction change to both */
+    flex-direction: column;
+    gap: 2rem; /* Consistent gap */
+  }
+  .about-pic {
+    width: 80%;
+    max-width: 350px; /* Limit image size for larger tablets */
+    height: auto;
+    margin: 0 auto 2rem auto; /* Center image with bottom margin */
+  }
+  .arrow {
+    display: none; /* Hide arrow on smaller screens */
+  }
+  .details-container {
+    padding: 1.2rem;
+    margin-bottom: 1rem; /* Add spacing between stacked details */
+  }
+  .edu {
+    font-size: 2rem;
+    margin: 1rem auto 0 auto; /* Center and adjust top margin */
+    text-decoration: none; /* Remove underline for cleaner look */
+    justify-content: center;
+  }
+  .edu1 {
+    margin: 0 auto; /* Center this element */
+    justify-content: center;
+  }
+
+  /* Experience Section */
+  .experience-sub-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .article-container {
+    gap: 1.5rem;
+    justify-content: center; /* Center articles if they wrap */
+  }
+  article {
+    width: 9rem; /* Adjust width */
+    font-size: 0.95rem; /* Slightly smaller text */
+  }
+  article i {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  /* Projects Section */
+  .project-img {
+    width: 80%;
+    height: auto;
+  }
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  /* Contact Section */
+  .contact-container {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: calc(100% - 2rem); /* Keep calculation for padding */
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+/* Mobile Devices (767px down to 480px) */
+/* Styles for most smartphones in portrait mode */
+@media screen and (max-width: 767px) {
+  /* General Layout */
+  section {
+    margin: 0 1rem; /* Even tighter horizontal margin */
+    padding-top: 5vh;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+
+  /* Navigation */
+  nav {
+    height: 10vh;
+    padding: 0 1rem;
+  }
+  #logo {
+    font-size: 1.1rem;
+  }
+  .menu-links a {
+    font-size: 1.5rem; /* Adjust hamburger menu link size */
+  }
+
+  /* Profile Section */
+  #profile {
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+  .section__pic-container {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 1rem auto;
+  }
+  .section__text__p1 {
+    font-size: 1.2rem;
+  }
+  .section__text__p2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .btn-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  .btn {
+    width: 80%; /* Buttons take more width when stacked */
+    max-width: 200px; /* Limit max width */
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+  .socials-container {
+    margin-top: 0.8rem;
+    gap: 0.6rem;
+  }
+  .icon {
+    height: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  /* About Section */
+  .about-pic {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto 1.5rem auto;
+  }
+  .details-container {
+    padding: 1rem;
+  }
+  .edu {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Experience Section */
+  .experience-sub-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .article-container {
+    gap: 1rem;
+  }
+  article {
+    width: 7rem;
+    font-size: 0.9rem;
+  }
+  article i {
+    font-size: 1.8rem;
+    margin-top: 0.8rem;
+  }
+
+  /* Projects Section */
+  .project-img {
+    width: 70%;
+  }
+  .project-title {
+    font-size: 1rem;
+  }
+
+  /* Contact Section */
+  .contact-container {
+    max-width: 95%;
+    padding: 1rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: calc(100% - 1.6rem); /* Adjust for new padding */
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .contact-form button {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  footer {
+    padding: 1rem 0;
+    height: auto;
+  }
+}
+
+/* Small Mobile Devices (479px and below) */
+/* Targeting very small phones like iPhone SE, older iPhones in portrait */
+@media screen and (max-width: 479px) {
+  /* General Layout */
+  section {
+    margin: 0 0.5rem; /* Minimal horizontal margin */
+    padding-top: 3vh;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+
+  /* Navigation */
+  nav {
+    height: 8vh;
+    padding: 0 0.5rem;
+  }
+  #logo {
+    font-size: 1rem;
+  }
+  .menu-links a {
+    font-size: 1.3rem;
+  }
+  .hamburger-icon {
+    height: 20px;
+    width: 25px;
+  }
+  .hamburger-icon span {
+    height: 1.5px; /* Thinner lines */
+  }
+
+  /* Profile Section */
+  #profile {
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  .section__pic-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 0.8rem auto;
+  }
+  .section__text__p1 {
+    font-size: 1rem;
+  }
+  .section__text__p2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+  .btn-container {
+    gap: 0.6rem;
+    margin-top: 0.6rem;
+  }
+  .btn {
+    width: 90%;
+    max-width: 180px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .socials-container {
+    margin-top: 0.6rem;
+    gap: 0.5rem;
+  }
+  .icon {
+    height: 1.4rem;
+    margin-top: 0.8rem;
+  }
+
+  /* About Section */
+  .about-pic {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 1rem auto;
+  }
+  .details-container {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  .edu {
+    font-size: 1.3rem;
+    margin-top: 0.3rem;
+  }
+
+  /* Experience Section */
+  .experience-sub-title {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  .article-container {
+    gap: 0.8rem;
+  }
+  article {
+    width: 6rem;
+    font-size: 0.8rem;
+    gap: 0.2rem;
+  }
+  article i {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Projects Section */
+  .project-img {
+    width: 60%;
+  }
+  .project-title {
+    font-size: 0.9rem;
+  }
+
+  /* Contact Section */
+  .contact-container {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: calc(100% - 1.2rem);
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+  }
+  .contact-form button {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  footer {
+    padding: 0.8rem 0;
+    font-size: 0.8rem;
+    height: auto;
+  }
+}
+
+/* Smallest Mobile Devices (e.g., specific very narrow viewports, 320px or less) */
+@media screen and (max-width: 374px) {
+  /* Further adjustments for extremely small screens */
+  section {
+    margin: 0 0.2rem;
+  }
+  #profile {
+    padding: 0.5rem 0;
+  }
+  .section__pic-container {
+    width: 150px;
+    height: 150px;
+  }
+  .section__text__p1 {
+    font-size: 0.8rem;
+  }
+  .section__text__p2 {
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+  .btn {
+    width: 95%;
+    max-width: 150px;
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+  .icon {
+    height: 1.2rem;
+  }
+  .details-container {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  .article-container {
+    gap: 0.5rem;
+  }
+  article {
+    width: 5rem;
+    font-size: 0.75rem;
+  }
+  article i {
+    font-size: 1.3rem;
+  }
+  .project-img {
+    width: 50%;
+  }
+  .project-title {
+    font-size: 0.8rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.8rem;
+  }
+  .contact-form button {
+    font-size: 0.8rem;
+  }
+}
