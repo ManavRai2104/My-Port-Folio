@@ -536,3 +536,17 @@ footer p {
   text-align: center;
   justify-content: center;
 }
+
+.prog {
+  flex-wrap: wrap;
+}
+
+.details-container:hover {
+  box-shadow: 10px 10px 10px rgba(120, 100, 90, 0.6) ;
+  transform: translateY(-8px);
+  background-color: #00dddd;
+}
+
+.details-container {
+  transition: all 0.3s ease;
+}
